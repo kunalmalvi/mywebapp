@@ -29,6 +29,7 @@ jobs:
       run: |
         python3 manage.py test
     - name: Rollback Release
+      if: failure()
       uses: author/action-rollback@1.0.0
       with:
         id: ${{ steps.create_release.id }}
