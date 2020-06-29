@@ -29,11 +29,5 @@ jobs:
       run: |
         python3 manage.py test
     - name: Rollback Release
-      if: failure()
-        uses: author/action-rollback@stable
-      with:
-        id: ${{ steps.create_release.id }}
-        tag: 'v1.0.1'
-        always_delete_tag: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: author/action-rollback@1.0.0
+
