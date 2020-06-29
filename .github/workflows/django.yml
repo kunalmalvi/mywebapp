@@ -34,4 +34,5 @@ jobs:
         id: ${{ steps.create_release.id }}
         tag: 'v1.0.1'
         always_delete_tag: true
-
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
