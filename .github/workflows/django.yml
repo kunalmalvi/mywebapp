@@ -30,5 +30,6 @@ jobs:
         python3 manage.py test
     - name: Rollback Release
       uses: author/action-rollback@1.0.0
-      id: ${{ steps.create_release.id }}
+      with:
+        id: ${{ steps.create_release.id }}
 
