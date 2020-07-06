@@ -15,26 +15,40 @@
 </style>
 
 </head>
-<body>
+<body background="{% static 'background.jpg' %}">
 <div>
-    <nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light shadow sticky-top">
       <div class="container">
-        <h2><a href="{% url 'home' %}" class="navbar-brand text-light"><b>MY WEB APP</b></a></h2>
+        <br>
+        <a href="{% url 'home' %}" class="navbar-brand text-black"><h1><b>MY WEB APP</b></h1></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-black" href="{% url 'home' %}"><h4><b>Home</b></h4></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-black" href="{% url 'contact' %}"><h4><b>Contact</b></h4></a>
+      </li>
+    
+    </ul>
+  </div>
+
+
         </div>
     </nav>
 </div>
 
 {% block content %}
 {% endblock %}
-
 <!-- Footer -->
-<footer class="page-footer font-small blue fixed-bottom">
+<footer class="page-footer font-small shadow-lg">
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 bg-dark text-light">© 2020 Copyright:
-    <a href="" class="text-white">Kunal Malvi</a>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="" class="text-black"><b>Kunal Malvi</b></a>
   </div>
   <!-- Copyright -->
 </footer>
